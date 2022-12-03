@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/header') %>
+    <title>New Data</title>
+  </head>
+
+  <body>
+    <%- include('partials/navigation') %>
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-4 mx-auto">
+          <form
+            method="POST"
+            target="/new-entry"
+            class="card bg-dark text-light card-body"
+          >
+            <div class="mb-3">
+              <label for="title">Athlete Name</label>
+              <input
+                name="authlete"
+                type="text"
+                class="form-control rounded-0"
+                placeholder="Athlete Name"
+                autofocus
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="title">Race</label>
+              <input
+                name="title"
+                type="text"
+                class="form-control rounded-0"
+                placeholder="Entry a Race (e.g 100m, 200m)"
+                autofocus
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="description">Description</label>
+              <textarea
+                class="form-control"
+                name="description"
+                rows="2"
+                required
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <input type="submit" value="Post Entry" class="btn btn-primary" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <%- include('partials/footer')%>
+  </body>
+</html>
